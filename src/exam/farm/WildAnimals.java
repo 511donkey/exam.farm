@@ -49,10 +49,12 @@ public class WildAnimals {
         if(strength > 0) this.strength = strength;
     }
 
+
+
     public void eat (PetAnimals petAnimal) {
-        if(petAnimal.getSpeed() > speed) {
+        if(petAnimal.getSpeed() < speed) {
             petAnimal.eaten();
-        }
+        } else {petAnimal.go();}
     }
 
     public void go(){
